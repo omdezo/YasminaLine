@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YASMINA LINE | عبايات نسائية</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <div class="nav-content">
+        <div class="logo"><p>YASMINA LINE</p></div>
+
+        <ul class="nav-menu">
+          <li><a href="#hero">الرئيسية</a></li>
+          <li><a href="#products">المنتجات</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="search-btn" aria-label="Search">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+          <button class="menu-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section - Modern Luxury Split -->
+    <section id="hero" class="hero-section">
+      <!-- Interactive Background -->
+      <canvas id="hero-bg-canvas"></canvas>
+
+      <!-- Left Side: Content -->
+      <div class="hero-left">
+        <div class="hero-content-wrapper">
+          <!-- Top Label -->
+          <div class="hero-brand-tag">
+            <div class="tag-line"></div>
+            <span>YASMINA LINE</span>
+            <div class="tag-line"></div>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="hero-heading">
+            الأناقة <span class="hero-heading-accent">الفاخرة</span> لكل امرأة
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-subtitle">
+            تصاميم استثنائية تجمع بين الأصالة والرقي العصري
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero-cta">
+            <a href="#products" class="cta-primary">
+              استكشف المجموعة
+            </a>
+            <a href="#about" class="cta-secondary">
+              <span>اعرف المزيد</span>
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Side: 3D Model -->
+      <div class="hero-right">
+        <div class="hero-3d-container">
+          <canvas id="hero-canvas"></canvas>
+
+          <!-- 3D Controls - Minimal -->
+          <div class="view-controls">
+            <button class="view-btn active" data-view="front" aria-label="Front View">
+              <span></span>
+            </button>
+            <button class="view-btn" data-view="side" aria-label="Side View">
+              <span></span>
+            </button>
+            <button class="view-btn" data-view="back" aria-label="Back View">
+              <span></span>
+            </button>
+          </div>
+
+          <!-- Loading Indicator -->
+          <div class="model-loading">
+            <div class="loading-spinner"></div>
+          </div>
+
+          <!-- Decorative Elements -->
+          <div class="hero-decor-circle"></div>
+          <div class="hero-decor-ring"></div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>استكشف</span>
+      </div>
+    </section>
+
+    <!-- Products Slider Section -->
+    <section id="products" class="products-section">
+      <div class="section-header">
+        <span class="section-subtitle">مجموعتنا الحصرية</span>
+        <h2 class="section-title">تصاميم تأسر القلوب</h2>
+        <p class="section-description">اكتشفي أرقى العبايات المصممة خصيصاً لإبراز أناقتك الفريدة</p>
+      </div>
+
+      <div class="container">
+        <div class="gallery">
+          <ul class="products">
+            <!-- Products will be added by JavaScript -->
+          </ul>
+        </div>
+
+        <button class="nav-btn prev">
+          <ion-icon name="chevron-back"></ion-icon>
+        </button>
+        <button class="nav-btn next">
+          <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+      </div>
+    </section>
+
+    <!-- About Section - Clean Modern Interactive -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <!-- Left Side: Content -->
+        <div class="about-content">
+          <span class="about-tag">من نحن</span>
+          <h2 class="about-heading">
+            أناقة تعكس<br />
+            <span class="highlight">هويتك الفريدة</span>
+          </h2>
+          <p class="about-text">
+            نؤمن بأن كل امرأة تستحق الشعور بالثقة والجمال. نصمم عبايات تجمع بين الأصالة العربية والفخامة العصرية، مع اهتمام بكل التفاصيل.
+          </p>
+
+          <a href="#products" class="about-cta">
+            <span>استكشف المجموعة</span>
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </a>
+        </div>
+
+        <!-- Right Side: Interactive Card -->
+        <div class="about-visual">
+          <div class="interactive-card" id="about-card">
+            <div class="card-shine"></div>
+            <img src="/products/abaya5/1.png" alt="YASMINA LINE" class="card-image" />
+            <div class="card-overlay">
+              <div class="overlay-content">
+                <ion-icon name="sparkles-outline"></ion-icon>
+                <p>تصاميم استثنائية</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Elements -->
+          <div class="float-circle float-circle-1"></div>
+          <div class="float-circle float-circle-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-content">
+        <div class="contact-info">
+          <span class="section-subtitle">تواصل معنا</span>
+          <h2 class="section-title">نحن هنا لخدمتك</h2>
+          <p class="contact-description">
+            لديك استفسار؟ نسعد بخدمتك على مدار الساعة
+          </p>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+              <div class="contact-details">
+                <h4>الهاتف</h4>
+                <p>+968 93509293</p>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-icon">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+              <div class="contact-details">
+                <h4>البريد الإلكتروني</h4>
+                <p>info@yasminaline.com</p>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-icon">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <div class="contact-details">
+                <h4>الموقع</h4>
+                <p>مسقط، سلطنة عمان</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Instagram">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a href="#" aria-label="WhatsApp">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label>الاسم</label>
+            <input type="text" placeholder="أدخل اسمك" required />
+          </div>
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" placeholder="أدخل بريدك الإلكتروني" required />
+          </div>
+          <div class="form-group">
+            <label>الرسالة</label>
+            <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span>إرسال الرسالة</span>
+            <ion-icon name="send"></ion-icon>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <p>YASMINA LINE</p>
+          </div>
+          <p class="footer-description">
+            وجهتك المثالية للعبايات الفاخرة والتصاميم العصرية
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">روابط سريعة</h3>
+          <ul class="footer-links">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#products">المنتجات</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">خدمة العملاء</h3>
+          <ul class="footer-links">
+            <li><a href="#">سياسة الإرجاع</a></li>
+            <li><a href="#">الشحن والتوصيل</a></li>
+            <li><a href="#">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Yasmina Line. جميع الحقوق محفوظة</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/hero-bg-interactive.js"></script>
+    <script type="module" src="/hero-3d.js"></script>
+    <script type="module" src="/simple-slider.js"></script>
+    <script type="module" src="/about-interactive.js"></script>
+  </body>
+</html>
