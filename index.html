@@ -21,7 +21,7 @@
     <!-- Main Navigation -->
     <nav class="main-nav">
       <div class="nav-content">
-        <div class="logo"><p>YASMINA LINE</p></div>
+        <div class="logo"><img src="/public/products/LOGOyasmina.png" alt="YASMINA LINE" /></div>
 
         <ul class="nav-menu">
           <li><a href="#hero">الرئيسية</a></li>
@@ -60,7 +60,7 @@
 
           <!-- Main Heading -->
           <h1 class="hero-heading">
-            الأناقة <span class="hero-heading-accent">الفاخرة</span> لكل امرأة
+            ننسجها لأجلكِ من <span class="hero-heading-accent">بتلاتِ الورد</span>
           </h1>
 
           <!-- Subtitle -->
@@ -184,77 +184,86 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-      <div class="contact-content">
-        <div class="contact-info">
+      <div class="contact-wrapper">
+        <!-- Section Header -->
+        <div class="contact-header">
           <span class="section-subtitle">تواصل معنا</span>
-          <h2 class="section-title">نحن هنا لخدمتك</h2>
-          <p class="contact-description">
-            لديك استفسار؟ نسعد بخدمتك على مدار الساعة
-          </p>
+          <h2 class="section-title">نسعد بالتواصل معك</h2>
+          <p class="contact-intro">تواصلي معنا لأي استفسار أو طلب خاص</p>
+        </div>
 
-          <div class="contact-methods">
-            <div class="contact-method">
-              <div class="contact-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-              <div class="contact-details">
-                <h4>الهاتف</h4>
-                <p>+968 93660399</p>
-              </div>
+        <!-- Contact Cards Grid -->
+        <div class="contact-grid">
+          <!-- Phone Card -->
+          <a href="tel:+96893660399" class="contact-card">
+            <div class="contact-card-icon">
+              <ion-icon name="call"></ion-icon>
             </div>
+            <h3 class="contact-card-title">اتصلي بنا</h3>
+            <p class="contact-card-info">+968 93660399</p>
+            <div class="contact-card-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+          </a>
 
-            <div class="contact-method">
-              <div class="contact-icon">
-                <ion-icon name="mail-outline"></ion-icon>
-              </div>
-              <div class="contact-details">
-                <h4>البريد الإلكتروني</h4>
-                <p>yasmeen.baomar@gmail.com</p>
-              </div>
+          <!-- WhatsApp Card -->
+          <a href="https://wa.me/96893660399" target="_blank" class="contact-card whatsapp">
+            <div class="contact-card-icon">
+              <ion-icon name="logo-whatsapp"></ion-icon>
             </div>
+            <h3 class="contact-card-title">واتساب</h3>
+            <p class="contact-card-info">تواصل فوري</p>
+            <div class="contact-card-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+          </a>
 
-            <div class="contact-method">
-              <div class="contact-icon">
-                <ion-icon name="location-outline"></ion-icon>
-              </div>
-              <div class="contact-details">
-                <h4>الموقع</h4>
-                <p>مسقط، سلطنة عمان</p>
-              </div>
+          <!-- Email Card -->
+          <a href="mailto:yasmeen.baomar@gmail.com" class="contact-card">
+            <div class="contact-card-icon">
+              <ion-icon name="mail"></ion-icon>
             </div>
+            <h3 class="contact-card-title">راسلينا</h3>
+            <p class="contact-card-info">yasmeen.baomar@gmail.com</p>
+            <div class="contact-card-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+          </a>
+
+          <!-- Instagram Card -->
+          <a href="https://www.instagram.com/y.line.om/" target="_blank" class="contact-card instagram">
+            <div class="contact-card-icon">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </div>
+            <h3 class="contact-card-title">انستقرام</h3>
+            <p class="contact-card-info">تابعينا على انستقرام</p>
+            <div class="contact-card-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+          </a>
+
+          <!-- Location Card -->
+          <div class="contact-card location">
+            <div class="contact-card-icon">
+              <ion-icon name="location"></ion-icon>
+            </div>
+            <h3 class="contact-card-title">موقعنا</h3>
+            <p class="contact-card-info">مسقط، سلطنة عمان</p>
           </div>
+        </div>
 
-          <div class="social-links">
-            <a href="#" aria-label="Instagram">
+        <!-- Social Media Links -->
+        <div class="contact-social">
+          <p class="social-title">تابعينا على</p>
+          <div class="social-links-row">
+            <a href="https://www.instagram.com/y.line.om/" target="_blank" class="social-link" aria-label="Instagram">
               <ion-icon name="logo-instagram"></ion-icon>
             </a>
-            <a href="#" aria-label="Twitter">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-            <a href="#" aria-label="WhatsApp">
+            <a href="https://wa.me/96893660399" target="_blank" class="social-link" aria-label="WhatsApp">
               <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
           </div>
         </div>
-
-        <form class="contact-form">
-          <div class="form-group">
-            <label>الاسم</label>
-            <input type="text" placeholder="أدخل اسمك" required />
-          </div>
-          <div class="form-group">
-            <label>البريد الإلكتروني</label>
-            <input type="email" placeholder="أدخل بريدك الإلكتروني" required />
-          </div>
-          <div class="form-group">
-            <label>الرسالة</label>
-            <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">
-            <span>إرسال الرسالة</span>
-            <ion-icon name="send"></ion-icon>
-          </button>
-        </form>
       </div>
     </section>
 
