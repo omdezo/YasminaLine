@@ -8,10 +8,13 @@
   --base-300: #8B2332;
   --base-400: #6B1119;
   --base-500: #5C0F15;
-  --gold: #C9A961;
-  --gold-light: #E5D4A8;
-  --gold-dark: #9B7F3D;
+  --gold: #C0C0C0;
+  --gold-light: #E8E8E8;
+  --gold-dark: #A8A8A8;
   --accent: #2C1810;
+  --silver: #C0C0C0;
+  --silver-light: #E8E8E8;
+  --silver-dark: #A8A8A8;
 }
 
 * {
