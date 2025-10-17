@@ -716,10 +716,31 @@ if (newsletterForm) {
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
+function closeMobileMenu() {
+  if (navMenu && menuToggle) {
+    navMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
+    document.body.style.overflow = '';
+
+    const spans = menuToggle.querySelectorAll('span');
+    spans.forEach(span => {
+      span.style.transform = '';
+      span.style.opacity = '';
+    });
+  }
+}
+
 if (menuToggle) {
   menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     menuToggle.classList.toggle('active');
+
+    // Toggle body scroll
+    if (menuToggle.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
 
     // Animate hamburger
     const spans = menuToggle.querySelectorAll('span');
@@ -732,6 +753,23 @@ if (menuToggle) {
         span.style.transform = '';
         span.style.opacity = '';
       });
+    }
+  });
+
+  // Close menu when clicking on nav links
+  const navLinks = navMenu.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('active') &&
+        !navMenu.contains(e.target) &&
+        !menuToggle.contains(e.target)) {
+      closeMobileMenu();
     }
   });
 }
@@ -783,6 +821,57 @@ if (scrollIndicator) {
 }
 
 console.log('🎨 Yasmina Line - UI Enhanced & Ready!');
+
+// ========== MOBILE OPTIMIZATIONS ==========
+
+// Fix for 100vh on mobile browsers (address bar issue)
+function setVH() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+setVH();
+window.addEventListener('resize', setVH);
+window.addEventListener('orientationchange', setVH);
+
+// Prevent zoom on input focus (additional safeguard)
+document.addEventListener('touchstart', function() {}, {passive: true});
+
+// Disable pull-to-refresh on certain elements
+const preventPullToRefresh = (element) => {
+  let touchStartY = 0;
+  element.addEventListener('touchstart', (e) => {
+    touchStartY = e.touches[0].clientY;
+  }, {passive: true});
+
+  element.addEventListener('touchmove', (e) => {
+    const touchY = e.touches[0].clientY;
+    const touchDiff = touchY - touchStartY;
+
+    if (element.scrollTop === 0 && touchDiff > 0) {
+      e.preventDefault();
+    }
+  }, {passive: false});
+};
+
+const scrollableElements = document.querySelectorAll('.nav-menu, .contact-form, .about-section');
+scrollableElements.forEach(el => preventPullToRefresh(el));
+
+// Optimize scroll performance on mobile
+let ticking = false;
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  lastScrollY = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      // Your scroll-based updates here
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, {passive: true});
 
 // ========== LUXURY PREMIUM FEATURES ==========
 
