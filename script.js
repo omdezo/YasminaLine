@@ -1082,17 +1082,18 @@ sections.forEach((section, index) => {
   section.style.animationDelay = `${index * 0.1}s`;
 });
 
-// Add Glass Effect to Navigation on Scroll
-const mainNav = document.querySelector('.main-nav');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    mainNav.style.background = 'rgba(253, 251, 247, 0.5)';
-    mainNav.style.backdropFilter = 'blur(40px) saturate(200%)';
-  } else {
-    mainNav.style.background = 'rgba(253, 251, 247, 0.7)';
-    mainNav.style.backdropFilter = 'blur(30px) saturate(180%)';
-  }
-});
+// Add Glass Effect to Navigation on Scroll (using existing mainNav variable)
+if (mainNav) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      mainNav.style.background = 'rgba(253, 251, 247, 0.5)';
+      mainNav.style.backdropFilter = 'blur(40px) saturate(200%)';
+    } else {
+      mainNav.style.background = 'rgba(253, 251, 247, 0.7)';
+      mainNav.style.backdropFilter = 'blur(30px) saturate(180%)';
+    }
+  });
+}
 
 // Premium Hover Effect for Product Images
 const productImages = document.querySelectorAll('.products li img');
